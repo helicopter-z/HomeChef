@@ -1,8 +1,9 @@
-package com.hackthe6ix.homechef;
+package com.hackthe6ix.homechef.activities;
 
 import android.os.Bundle;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.hackthe6ix.homechef.R;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
