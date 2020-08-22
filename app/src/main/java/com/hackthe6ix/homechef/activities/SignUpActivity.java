@@ -25,7 +25,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
     TextView changeSignUpModeTextView;
     EditText usernameEditText;
     EditText passwordEditText;
-    RelativeLayout backgroundRelativeLayout;
+    LinearLayout backgroundLinearLayout;
 
     //keyboard gone once click enter
     @Override
@@ -54,7 +54,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     public void onClick(View view) {
         // close keyboard if click somewhere else
-        if (view.getId() == R.id.backgroundRelativeLayout){
+        if (view.getId() == R.id.backgroundLinearLayout){
             InputMethodManager inputMethodManager = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
             inputMethodManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(),0);
         }
@@ -108,12 +108,12 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
-        backgroundRelativeLayout = (RelativeLayout) findViewById(R.id.backgroundRelativeLayout);
+        backgroundLinearLayout = (LinearLayout) findViewById(R.id.backgroundLinearLayout);
         usernameEditText = (EditText) findViewById(R.id.usernameEditText);
         passwordEditText = (EditText) findViewById(R.id.passwordEditText);
 
         passwordEditText.setOnKeyListener(this);
-        backgroundRelativeLayout.setOnClickListener(this);
+        backgroundLinearLayout.setOnClickListener(this);
 
         ParseAnalytics.trackAppOpenedInBackground(getIntent());
     }
