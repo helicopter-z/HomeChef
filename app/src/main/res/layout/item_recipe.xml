@@ -4,7 +4,7 @@
     android:layout_height="wrap_content"
     android:gravity="center_horizontal"
     android:padding="@dimen/space16"
-    android:background="?android:attr/selectableItemBackground">
+    android:background="?attr/selectableItemBackground">
     <ImageView
         android:id="@+id/iv_recipe"
         android:layout_width="@dimen/recipeImg"
