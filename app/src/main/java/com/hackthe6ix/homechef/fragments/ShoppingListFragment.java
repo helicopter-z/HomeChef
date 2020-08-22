@@ -1,4 +1,4 @@
-package com.foodapp.android.foodapp.fragment;
+package com.hackthe6ix.homechef.fragments;
 
 import android.os.Bundle;
 import androidx.annotation.NonNull;
@@ -46,7 +46,7 @@ public class ShoppingListFragment extends AppCompatActivity {
 
 
         shoppingListRecyclerView = (RecyclerView) rootView.findViewById(R.id.recycler_view_shoppingList);
-        LinearLayoutManager linearLayout = new LinearLayoutManager(getActivity());
+        LinearLayoutManager linearLayout = new LinearLayoutManager(this);
         shoppingListRecyclerView.setLayoutManager(linearLayout);
 
 
