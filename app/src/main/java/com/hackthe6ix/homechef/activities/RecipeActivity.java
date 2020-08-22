@@ -3,9 +3,9 @@ package com.hackthe6ix.homechef.activities;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -17,10 +17,10 @@ import android.widget.Toast;
 import android.widget.ToggleButton;
 
 import com.hackthe6ix.homechef.R;
-import com.hackthe6ix.homechef.adapter.IngredientListAdapter;
-import com.hackthe6ix.homechef.models.RecipeDetails.Image;
-import com.hackthe6ix.homechef.models.RecipeDetails.RecipeInfo;
-import com.hackthe6ix.homechef.network.GetRecipeDataService;
+import com.hackthe6ix.homechef.adapters.IngredientListAdapter;
+import com.hackthe6ix.homechef.models.RecipeContent.Image;
+import com.hackthe6ix.homechef.models.RecipeContent.RecipeInfo;
+import com.hackthe6ix.homechef.network.GetRecipe;
 import com.hackthe6ix.homechef.network.RetrofitInstance;
 import com.iarcuschin.simpleratingbar.SimpleRatingBar;
 import com.like.LikeButton;
@@ -158,7 +158,7 @@ public class RecipeActivity extends AppCompatActivity implements View.OnClickLis
         /*Call the method with parameter in the interface to get the recipe data*/
         //Creating a retrofit object
         //creating the api interface
-        GetRecipeDataService service = RetrofitInstance.getRetrofitInstance().create(GetRecipeDataService.class);
+        GetRecipe service = RetrofitInstance.getRetrofitInstance().create(GetRecipe.class);
         Call<RecipeInfo> call = service.recipeDetail(value, APP_ID, APP_KEY);
 
         /*Log the URL called*/

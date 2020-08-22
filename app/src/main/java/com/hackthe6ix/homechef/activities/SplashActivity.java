@@ -4,8 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.parse.ParseAnalytics;
-import com.parse.ParseUser;
 
 public class SplashActivity extends AppCompatActivity {
     @Override

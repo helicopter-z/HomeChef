@@ -8,6 +8,7 @@
          location permissions for the "MyLocation" functionality.
     -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="andoird.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -27,26 +28,23 @@
         -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_maps_key" />
+            android:value="AIzaSyATvr1r6p264i7X0O6_8Tb6Vn1to8IBtdY" />
 
+        <activity android:name=".activities.SplashActivity" />
         <activity
-            android:name=".activities.LocationActivity"
-            android:label="@string/title_activity_location"></activity>
-        <activity android:name=".activities.SplashActivity.SplashActivity" />
-        <activity
-            android:name=".activities.RecipeActivity.RecipeActivity"
-            android:label="@string/title_activity_recipe"
+            android:name=".activities.RecipeActivity"
+            android:label="activity_recipe"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".activities.AccountActivity.AccountActivity"
-            android:label="@string/title_activity_account"
+            android:name=".activities.AccountActivity"
+            android:label="activity_account"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".activities.SignUpActivity.ui.login.SignupActivity"
-            android:label="@string/title_activity_signup" />
+            android:name=".activities.SignUpActivity"
+            android:label="activity_signup" />
         <activity
-            android:name=".activities.LogInActivity.ui.login.LoginActivity"
-            android:label="@string/title_activity_login" />
+            android:name=".activities.LogInActivity"
+            android:label="activity_login" />
         <activity
             android:name=".activities.MainActivity"
             android:label="@string/app_name">

@@ -25,7 +25,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
     TextView changeSignUpModeTextView;
     EditText usernameEditText;
     EditText passwordEditText;
-    LinearLayout backgroundLinearLayout;
+    RelativeLayout backgroundRelativeLayout;
 
     //keyboard gone once click enter
     @Override
@@ -54,7 +54,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     public void onClick(View view) {
         // close keyboard if click somewhere else
-        if (view.getId() == R.id.BackgroundLinearLayout){
+        if (view.getId() == R.id.backgroundRelativeLayout){
             InputMethodManager inputMethodManager = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
             inputMethodManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(),0);
         }
@@ -68,9 +68,9 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         }else {
 
             ParseUser user = new ParseUser();
-            user.SetUsername(usernameEditText.getText().toString());
-            user.SetPassword(passwordEditText.getText().toString());
-            user.SignUpInBackground(new SignUpCallback() {
+            user.setUsername(usernameEditText.getText().toString());
+            user.setPassword(passwordEditText.getText().toString());
+            user.signUpInBackground(new SignUpCallback() {
                 @Override
                 public void done(ParseException e) {
                     if (e == null) {
@@ -85,7 +85,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                                     Log.i("SignUp", "LogIn successful");
 
                                     // Stores information that user already logged in
-                                    SharedPreference.setUserName(getApplicationContext(), user.getObjectId());
+                                    AccountActivity.setUserName(getApplicationContext(), user.getObjectId());
 
                                     Intent i = new Intent(SignUpActivity.this, MainActivity.class);
                                     i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -108,12 +108,12 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
-        backgroundLinearLayout = (LinearLayout) findViewById(R.id.backgroundLinearLayout);
+        backgroundRelativeLayout = (RelativeLayout) findViewById(R.id.backgroundRelativeLayout);
         usernameEditText = (EditText) findViewById(R.id.usernameEditText);
         passwordEditText = (EditText) findViewById(R.id.passwordEditText);
 
         passwordEditText.setOnKeyListener(this);
-        backgroundLinearLayout.setOnClickListener(this);
+        backgroundRelativeLayout.setOnClickListener(this);
 
         ParseAnalytics.trackAppOpenedInBackground(getIntent());
     }

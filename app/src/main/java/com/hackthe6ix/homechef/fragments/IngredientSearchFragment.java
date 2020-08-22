@@ -34,7 +34,7 @@ import com.hackthe6ix.homechef.R;
 import com.hackthe6ix.homechef.adapters.IngredientSearchAdapter;
 import com.hackthe6ix.homechef.models.RecipeSearch.Match;
 import com.hackthe6ix.homechef.models.RecipeSearch.RecipeList;
-import com.hackthe6ix.homechef.network.GetRecipeDataService;
+import com.hackthe6ix.homechef.network.GetRecipe;
 import com.hackthe6ix.homechef.network.RetrofitInstance;
 
 import java.util.ArrayList;
@@ -122,7 +122,7 @@ public class IngredientSearchFragment extends Fragment implements View.OnClickLi
                         }
                     }
 
-                    GetRecipeDataService service = RetrofitInstance.getRetrofitInstance().create(GetRecipeDataService.class);
+                    GetRecipe service = RetrofitInstance.getRetrofitInstance().create(GetRecipe.class);
 
                     Call<RecipeList> call = service.allowedIngredients(urlString);
 
@@ -285,7 +285,7 @@ public class IngredientSearchFragment extends Fragment implements View.OnClickLi
         }
         Log.i("STRING", urlString);
 
-        GetRecipeDataService service = RetrofitInstance.getRetrofitInstance().create(GetRecipeDataService.class);
+        GetRecipe service = RetrofitInstance.getRetrofitInstance().create(GetRecipe.class);
 
         Call<RecipeList> call = service.allowedIngredients(urlString);
 

@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -16,16 +17,13 @@ import com.parse.LogInCallback;
 import com.parse.ParseAnalytics;
 import com.parse.ParseException;
 import com.parse.ParseUser;
-import com.parse.SignUpCallback;
-import com.parse.Parse;
-import com.parse.SaveCallback;
 
 public class LogInActivity extends AppCompatActivity implements View.OnClickListener, View.OnKeyListener {
 
     TextView changeSignUpModeTextView;
     EditText usernameEditText;
     EditText passwordEditText;
-    LinearLayout backgroundLinearLayout;
+    RelativeLayout backgroundRelativeLayout;
 
     //keyboard gone once click enter
     @Override
@@ -89,12 +87,12 @@ public class LogInActivity extends AppCompatActivity implements View.OnClickList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        backgroundLinearLayout = (LinearLayout) findViewById(R.id.backgroundLinearLayout);
+        backgroundRelativeLayout = (RelativeLayout) findViewById(R.id.backgroundRelativeLayout);
         usernameEditText = (EditText) findViewById(R.id.usernameEditText);
         passwordEditText = (EditText) findViewById(R.id.passwordEditText);
 
         passwordEditText.setOnKeyListener(this);
-        backgroundLinearLayout.setOnClickListener(this);
+        backgroundRelativeLayout.setOnClickListener(this);
 
         ParseAnalytics.trackAppOpenedInBackground(getIntent());
     }
