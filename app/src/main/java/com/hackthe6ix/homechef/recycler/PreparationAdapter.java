@@ -1,8 +1,7 @@
-package com.uiresource.cookit.recycler;
+package com.hackthe6ix.homechef.recycler;
 
 import android.content.Context;
 import android.os.Build;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
@@ -11,7 +10,7 @@ import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.uiresource.cookit.R;
+import com.hackthe6ix.homechef.R;
 
 import java.util.List;
 

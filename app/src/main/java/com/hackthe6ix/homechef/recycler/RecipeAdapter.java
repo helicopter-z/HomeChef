@@ -1,8 +1,8 @@
-package com.uiresource.cookit.recycler;
+package com.hackthe6ix.homechef.recycler;
 
 import android.content.Context;
 import android.net.Uri;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
@@ -12,8 +12,9 @@ import android.widget.RatingBar;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.uiresource.cookit.R;
-import com.uiresource.cookit.utils.CircleGlide;
+import com.hackthe6ix.homechef.R;
+import com.hackthe6ix.homechef.utils.CircleGlide;
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
@@ -21,13 +22,13 @@ import java.util.List;
  * Created by Dytstudio.
  */
 
-public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.MyViewHolder> {
+public class RecipeAdapter extends recyclerview.Adapter<RecipeAdapter.MyViewHolder> {
 
     private List<ItemRecipe> items;
     private Context context;
     private boolean active;
 
-    public static class MyViewHolder extends RecyclerView.ViewHolder{
+    public static class MyViewHolder extends recyclerview.ViewHolder{
         public TextView recipe, time;
         public RatingBar ratingBar;
         public ImageView imageView;

@@ -1,7 +1,8 @@
-package com.uiresource.cookit.recycler;
+package com.hackthe6ix.homechef.recycler;
 
-import android.support.v7.widget.RecyclerView;
 import android.util.SparseBooleanArray;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 import java.util.List;

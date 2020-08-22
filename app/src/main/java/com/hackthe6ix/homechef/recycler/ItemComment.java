@@ -1,4 +1,4 @@
-package com.uiresource.cookit.recycler;
+package com.hackthe6ix.homechef.recycler;
 
 /**
  * Created by Dytstudio.

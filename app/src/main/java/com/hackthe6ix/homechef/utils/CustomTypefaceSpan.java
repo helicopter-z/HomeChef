@@ -1,4 +1,4 @@
-package com.uiresource.cookit.utils;
+package com.hackthe6ix.homechef.utils;
 
 import android.graphics.Paint;
 import android.graphics.Typeface;

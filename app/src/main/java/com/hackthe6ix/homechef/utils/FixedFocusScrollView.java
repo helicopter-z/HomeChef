@@ -1,10 +1,8 @@
-package com.uiresource.cookit.utils;
+package com.hackthe6ix.homechef.utils;
 
 import android.content.Context;
-import android.support.v4.widget.NestedScrollView;
 import android.util.AttributeSet;
 import android.view.View;
-import android.widget.ScrollView;
 
 import java.util.ArrayList;
 
@@ -12,7 +10,7 @@ import java.util.ArrayList;
  * Created by Dytstudio.
  */
 
-public class FixedFocusScrollView extends NestedScrollView {
+public class FixedFocusScrollView extends androidx.core.widget.NestedScrollView {
 
     public FixedFocusScrollView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
