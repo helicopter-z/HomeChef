@@ -56,7 +56,7 @@
         android:layout_marginTop="10dp"
         android:background="@color/colorPinkTrans"
         android:onClick="loginClick"
-        android:text="Sign up"
+        android:text="Login"
         android:textColor="@color/colorTextDark" />
 
 
