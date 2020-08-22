@@ -1,6 +1,6 @@
-package com.uiresource.cookit.utils;
+package com.hackthe6ix.homechef.utils;
 
-import android.support.design.widget.AppBarLayout;
+import com.google.android.material.appbar.AppBarLayout;
 
 /**
  * Created by Dytstudio.

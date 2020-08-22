@@ -17,12 +17,22 @@
         android:layout_marginTop="@dimen/space24" />
 
     <TextView
+        android:id="@+id/accountName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="@dimen/space8"
         android:text="@string/Name"
         android:textColor="@android:color/white"
         android:textSize="@dimen/h3"
+        android:textAppearance="@style/SemiBold"/>
+
+    <TextView
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:textSize="30px"
+        android:text="123456@qq.com"
         android:textAppearance="@style/SemiBold"/>
 
 </LinearLayout>
