@@ -193,16 +193,6 @@ public class RecipeActivity extends AppCompatActivity implements View.OnClickLis
         });
     }
 
-//    /*Method to generate recipe info using RecyclerView with custom adapter*/
-//    private void generateRecipeInfo(List<String> recipeIngredientList) {
-//        Intent intent = getIntent();
-//        recyclerView = (RecyclerView) findViewById(R.id.recycler_view_ingredients);
-//        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(RecipeActivity.this);
-//        recyclerView.setLayoutManager(layoutManager);
-//        adapter = new IngredientListAdapter(RecipeActivity.this, recipeIngredientList, intent);
-//        recyclerView.setAdapter(adapter);
-//    }
-
     public void onClick(View view) {
         Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(prep_url));
         startActivity(browserIntent);
