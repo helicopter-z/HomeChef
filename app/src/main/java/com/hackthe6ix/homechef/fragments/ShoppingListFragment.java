@@ -3,7 +3,8 @@ package com.foodapp.android.foodapp.fragment;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -23,7 +24,7 @@ import com.parse.ParseUser;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ShoppingListFragment extends Fragment {
+public class ShoppingListFragment extends AppCompatActivity {
     final List<ShoppingListResults> resultList = new ArrayList<>();
     ShoppingListParentAdapter adapter;
     RecyclerView shoppingListRecyclerView;
@@ -32,7 +33,7 @@ public class ShoppingListFragment extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        adapter = new ShoppingListParentAdapter(resultList, getActivity());
+        adapter = new ShoppingListParentAdapter(resultList, this);
     }
 
     @Nullable
