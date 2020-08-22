@@ -15,7 +15,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.hackthe6ix.homechef.R;
-import com.hackthe6ix.homechef.adapter.FavouriteAdapter;
+import com.hackthe6ix.homechef.adapters.FavouriteAdapter;
 import com.hackthe6ix.homechef.models.FavoriteRecipes.Results;
 import com.parse.FindCallback;
 import com.parse.ParseException;
