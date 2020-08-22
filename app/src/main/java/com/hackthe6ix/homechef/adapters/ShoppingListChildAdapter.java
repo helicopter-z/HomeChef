@@ -1,12 +1,13 @@
 package com.hackthe6ix.homechef.adapters;
 
-import android.app.Activity;
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.hackthe6ix.homechef.R;
 
@@ -15,9 +16,9 @@ import java.util.List;
 // Adapter for the Recipe individual ingredients
 public class ShoppingListChildAdapter extends RecyclerView.Adapter<ShoppingListChildAdapter.IngredientViewHolder> {
     private List<String> ingredients;
-    private Activity activity;
+    private AppCompatActivity activity;
 
-    public ShoppingListChildAdapter(List<String> ingredients, Activity activity) {
+    public ShoppingListChildAdapter(List<String> ingredients, AppCompatActivity activity) {
         this.ingredients = ingredients;
         this.activity = activity;
     }

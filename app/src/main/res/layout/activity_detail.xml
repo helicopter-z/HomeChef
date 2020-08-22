@@ -91,14 +91,14 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/space16"
                     android:layout_marginBottom="@dimen/space8"
-                    android:src="@drawable/ic_shoppinglist" />
+                    app:srcCompat="@drawable/ic_shoppinglist" />
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/space16"
                     android:layout_marginBottom="@dimen/space8"
-                    android:src="@drawable/ic_preparation" />
+                    app:srcCompat="@drawable/ic_preparation" />
 
                 <LinearLayout
                     android:id="@+id/ll_info"
@@ -237,22 +237,22 @@
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:src="@drawable/ic_google" />
+                                    app:srcCompat="@drawable/ic_google" />
 
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:src="@drawable/ic_facebook" />
+                                    app:srcCompat="@drawable/ic_facebook" />
 
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:src="@drawable/ic_twitter" />
+                                    app:srcCompat="@drawable/ic_twitter" />
 
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:src="@drawable/ic_instgram" />
+                                    app:srcCompat="@drawable/ic_instgram" />
                             </LinearLayout>
 
                             <TextView

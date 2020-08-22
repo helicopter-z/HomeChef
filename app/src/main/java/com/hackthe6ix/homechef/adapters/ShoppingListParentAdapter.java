@@ -1,14 +1,15 @@
 package com.hackthe6ix.homechef.adapters;
 
-import android.app.Activity;
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.hackthe6ix.homechef.R;
 import com.hackthe6ix.homechef.models.ShoppingList.ShoppingListResults;
@@ -19,8 +20,8 @@ import java.util.List;
 // Adapter for the Recipe Image/Label
 public class ShoppingListParentAdapter extends RecyclerView.Adapter<ShoppingListParentAdapter.ListViewHolder> {
     private List<ShoppingListResults> ParseList;
-    private Activity activity;
-    public ShoppingListParentAdapter(List<ShoppingListResults> ParseList, Activity activity){
+    private AppCompatActivity activity;
+    public ShoppingListParentAdapter(List<ShoppingListResults> ParseList, AppCompatActivity activity){
         this.ParseList = ParseList;
         this.activity = activity;
     }

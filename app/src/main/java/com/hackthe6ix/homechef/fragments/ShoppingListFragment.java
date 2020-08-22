@@ -1,4 +1,4 @@
-package com.hackthe6ix.homechef.fragments;
+package com.foodapp.android.foodapp.fragment;
 
 import android.os.Bundle;
 import androidx.annotation.NonNull;
