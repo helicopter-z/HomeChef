@@ -30,7 +30,7 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".activities.LocationActivity.LocationActivity"
+            android:name=".activities.LocationActivity"
             android:label="@string/title_activity_location"></activity>
         <activity android:name=".activities.SplashActivity.SplashActivity" />
         <activity

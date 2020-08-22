@@ -1,4 +1,4 @@
-package com.hackthe6ix.homechef.activities.LocationActivity;
+package com.hackthe6ix.homechef.activities;
 
 import androidx.fragment.app.FragmentActivity;
 
@@ -10,6 +10,7 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.hackthe6ix.homechef.R;
 
 public class LocationActivity extends FragmentActivity implements OnMapReadyCallback {
 
