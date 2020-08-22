@@ -79,7 +79,6 @@ public class RecipeActivity extends AppCompatActivity implements View.OnClickLis
         recipeLayout.setVisibility(View.INVISIBLE);
         progressBar.setVisibility(View.VISIBLE);
 
-        likeButton = findViewById(R.id.star_button);
 
         Log.i("User logged in", ParseUser.getCurrentUser().getUsername());
         // Checks if user has previously favourite a recipe

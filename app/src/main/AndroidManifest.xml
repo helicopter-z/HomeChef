@@ -33,12 +33,10 @@
         <activity android:name=".activities.SplashActivity" />
         <activity
             android:name=".activities.RecipeActivity"
-            android:label="activity_recipe"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:label="activity_recipe" />
         <activity
             android:name=".activities.AccountActivity"
-            android:label="activity_account"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:label="activity_account" />
         <activity
             android:name=".activities.SignUpActivity"
             android:label="activity_signup" />
