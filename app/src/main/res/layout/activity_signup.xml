@@ -61,15 +61,15 @@
 
 
     <TextView
-        android:id="@+id/link_signup"
+        android:id="@+id/link_login"
         android:layout_below="@+id/loginButton"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         android:gravity="center"
-        android:onClick="signupClick"
-        android:text="No account yet? Create one"
+        android:onClick="loginClick"
+        android:text="Has an account? Log in"
         android:textColor="@color/colorTextDark"
         android:textSize="16dip" />
 
