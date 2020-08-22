@@ -81,137 +81,190 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:focusable="true"
-                android:focusableInTouchMode="true"
+                android:orientation="vertical"
                 android:gravity="center_horizontal"
-                android:orientation="vertical">
-
-                <ImageView
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+                <RatingBar
+                    android:id="@+id/ratingBar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/space16"
-                    android:layout_marginBottom="@dimen/space8"
-                    app:srcCompat="@drawable/ic_shoppinglist" />
-
-                <ImageView
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/space24"
+                    android:rating="3.5"
+                    android:numStars="5"
+                    android:isIndicator="true"
+                    style="@style/RatingBar"/>
+                <TextView
+                    android:id="@+id/tv_recipe_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/space16"
-                    android:layout_marginBottom="@dimen/space8"
-                    app:srcCompat="@drawable/ic_preparation" />
-
+                    android:layout_below="@id/ratingBar"
+                    android:layout_marginTop="-16dp"
+                    android:layout_centerHorizontal="true"
+                    android:text="SEMIFREDDO TIRAMISU"
+                    android:gravity="center_horizontal"
+                    style="@style/Text22Semi"/>
                 <LinearLayout
                     android:id="@+id/ll_info"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
-
                     <TextView
                         android:id="@+id/tv_time"
-                        style="@style/Text14Grey"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/space8"
+                        android:gravity="center_vertical"
                         android:drawableLeft="@drawable/ic_time"
                         android:drawablePadding="@dimen/space8"
-                        android:gravity="center_vertical"
-                        android:text="1h 20'" />
-
+                        android:text="1h 20'"
+                        style="@style/Text14Grey"/>
                     <TextView
                         android:id="@+id/tv_love"
-                        style="@style/Text14Grey"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="@dimen/space24"
                         android:layout_marginTop="@dimen/space8"
                         android:drawableLeft="@drawable/ic_favorite"
                         android:drawablePadding="@dimen/space8"
                         android:gravity="center_vertical"
-                        android:text="968" />
-
+                        android:text="968"
+                        style="@style/Text14Grey"
+                        android:layout_marginLeft="@dimen/space24"/>
                     <TextView
                         android:id="@+id/tv_comments"
-                        style="@style/Text14Grey"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="@dimen/space24"
                         android:layout_marginTop="@dimen/space8"
                         android:drawableLeft="@drawable/ic_comments"
                         android:drawablePadding="@dimen/space8"
                         android:gravity="center_vertical"
-                        android:text="100" />
+                        android:text="100"
+                        style="@style/Text14Grey"
+                        android:layout_marginLeft="@dimen/space24"/>
                 </LinearLayout>
+                <TextView
+                    android:id="@+id/tv_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space16"
+                    android:layout_marginLeft="@dimen/space24"
+                    android:layout_marginRight="@dimen/space24"
+                    android:drawablePadding="@dimen/space8"
+                    android:gravity="center_horizontal"
+                    android:text=" so semifreddo as a combination with one of my favorite desserts Tiramisu sounded so wonderful in my mind that I made me equal to work, to test ever."
+                    style="@style/Text14Grey"/>
+                <TextView
+                    android:id="@+id/tv_author"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space8"
+                    android:drawablePadding="@dimen/space8"
+                    android:text="by Marco Tomasini"
+                    style="@style/Text14ItGrey"/>
 
                 <LinearLayout
                     android:id="@+id/ll_action"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:orientation="horizontal"
                     android:layout_marginTop="@dimen/space16"
-                    android:background="@android:color/transparent"
                     android:gravity="center_vertical"
-                    android:orientation="horizontal">
-
+                    android:background="@android:color/transparent">
                     <Button
                         android:id="@+id/tv_share"
-                        style="@style/Text14Pink"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@null"
-                        android:gravity="center"
-                        android:paddingLeft="@dimen/space24"
                         android:paddingRight="@dimen/space24"
-                        android:text="SHARE" />
-
+                        android:paddingLeft="@dimen/space24"
+                        android:gravity="center"
+                        android:text="SHARE"
+                        style="@style/Text14Pink"
+                        android:background="@null"/>
+                    <View
+                        android:layout_width="1.5dp"
+                        android:layout_height="@dimen/space8"
+                        android:background="@color/colorPink"/>
                     <Button
                         android:id="@+id/tv_comment"
-                        style="@style/Text14Pink"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@null"
-                        android:gravity="center"
                         android:paddingLeft="@dimen/space24"
                         android:paddingRight="@dimen/space24"
-                        android:text="COMMENT" />
-
+                        android:gravity="center"
+                        android:text="COMMENT"
+                        style="@style/Text14Pink"
+                        android:background="@null"/>
+                    <View
+                        android:layout_width="1.5dp"
+                        android:layout_height="@dimen/space8"
+                        android:background="@color/colorPink"/>
                     <Button
                         android:id="@+id/tv_rate"
-                        style="@style/Text14Pink"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@null"
-                        android:gravity="center"
                         android:paddingLeft="@dimen/space24"
                         android:paddingRight="@dimen/space24"
-                        android:text="RATE" />
-
-                    <View
-                        android:layout_width="1.5dp"
-                        android:layout_height="@dimen/space8"
-                        android:background="@color/colorPink" />
-
-                    <View
-                        android:layout_width="1.5dp"
-                        android:layout_height="@dimen/space8"
-                        android:background="@color/colorPink" />
+                        android:gravity="center"
+                        android:text="RATE"
+                        style="@style/Text14Pink"
+                        android:background="@null"/>
                 </LinearLayout>
-
-                <RatingBar
-                    android:id="@+id/ratingBar"
-                    style="@style/RatingBar"
+                <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginBottom="@dimen/space24"
-                    android:isIndicator="true"
-                    android:numStars="5"
-                    android:rating="3.5" />
-
+                    android:layout_marginTop="@dimen/space16"
+                    android:layout_marginBottom="@dimen/space8"
+                    android:src="@drawable/ic_shoppinglist"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space16"
+                    android:text="SHOPPING LIST"
+                    android:textSize="@dimen/h2"
+                    android:textColor="@color/colorTextDark"
+                    android:textAppearance="@style/SemiBold"/>
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerShopping"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space16"
+                    android:background="@null"
+                    android:nestedScrollingEnabled="false"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space16"
+                    android:layout_marginBottom="@dimen/space8"
+                    android:text="OPEN SHOPPING LIST"
+                    android:textColor="@color/colorPink"
+                    android:textSize="@dimen/h3"
+                    android:textAppearance="@style/Regular"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space16"
+                    android:layout_marginBottom="@dimen/space8"
+                    android:src="@drawable/ic_preparation"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space16"
+                    android:text="PREPARATION"
+                    android:textSize="@dimen/h2"
+                    android:textColor="@color/colorTextDark"
+                    android:textAppearance="@style/SemiBold"/>
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/space16"
                     android:layout_marginBottom="@dimen/space8">
-
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerPreparation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:nestedScrollingEnabled="false"/>
                     <RelativeLayout
                         android:id="@+id/rl_share"
                         android:layout_width="match_parent"
@@ -220,198 +273,109 @@
                         android:layout_alignBottom="@id/recyclerPreparation"
                         android:background="@color/colorWhiteTrans"
                         android:visibility="gone">
-
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_centerInParent="true"
+                            android:orientation="vertical"
                             android:gravity="center_horizontal"
-                            android:orientation="vertical">
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="@dimen/space8"
-                                android:orientation="horizontal">
-
-                                <ImageView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    app:srcCompat="@drawable/ic_google" />
-
-                                <ImageView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    app:srcCompat="@drawable/ic_facebook" />
-
-                                <ImageView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    app:srcCompat="@drawable/ic_twitter" />
-
-                                <ImageView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    app:srcCompat="@drawable/ic_instgram" />
-                            </LinearLayout>
-
-                            <TextView
-                                style="@style/Text14Grey"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="@dimen/space8"
-                                android:text="You did it! Let your friend know about it!" />
-
+                            android:layout_centerInParent="true">
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="WELL DONE"
-                                android:textAppearance="@style/SemiBold"
+                                android:textSize="@dimen/h2"
                                 android:textColor="@color/colorTextDark"
-                                android:textSize="@dimen/h2" />
+                                android:textAppearance="@style/SemiBold"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/space8"
+                                android:text="You did it! Let your friend know about it!"
+                                style="@style/Text14Grey"/>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginTop="@dimen/space8">
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/ic_google"/>
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/ic_facebook"/>
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/ic_twitter"/>
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/ic_instgram"/>
+                            </LinearLayout>
                         </LinearLayout>
                     </RelativeLayout>
-
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/recyclerPreparation"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@null"
-                        android:nestedScrollingEnabled="false" />
                 </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/space16"
-                    android:background="#f4f4f4"
-                    android:padding="@dimen/space16">
-
-                    <EditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:layout_marginLeft="@dimen/space16"
-                        android:layout_marginRight="@dimen/space16"
-                        android:layout_toLeftOf="@id/bt_send"
-                        android:layout_toRightOf="@id/iv_user"
-                        android:background="@null"
-                        android:focusable="true"
-                        android:focusableInTouchMode="true"
-                        android:hint="Type your comment here…"
-                        android:lines="2"
-                        android:paddingTop="@dimen/space16"
-                        android:paddingBottom="@dimen/space16"
-                        android:textAppearance="@style/Regular"
-                        android:textColor="@color/colorTextDark"
-                        android:textColorHint="@color/colorTextGrey"
-                        android:textSize="@dimen/h3" />
-
-                    <ImageButton
-                        android:id="@+id/bt_send"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:layout_alignParentRight="true"
-                        android:layout_centerVertical="true"
-                        android:background="@null"
-                        android:padding="@dimen/space8"
-                        app:srcCompat="@drawable/ic_comment_red" />
-
-                    <ImageView
-                        android:id="@+id/iv_user"
-                        android:layout_width="45dp"
-                        android:layout_height="45dp"
-                        android:layout_alignParentLeft="true"
-                        android:layout_centerVertical="true" />
-                </RelativeLayout>
-
-                <TextView
-                    android:id="@+id/tv_recipe_name"
-                    style="@style/Text22Semi"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/ratingBar"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="-16dp"
-                    android:gravity="center_horizontal"
-                    android:text="SEMIFREDDO TIRAMISU" />
-
-                <TextView
-                    android:id="@+id/tv_desc"
-                    style="@style/Text14Grey"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/space24"
-                    android:layout_marginTop="@dimen/space16"
-                    android:layout_marginRight="@dimen/space24"
-                    android:drawablePadding="@dimen/space8"
-                    android:gravity="center_horizontal"
-                    android:text=" so semifreddo as a combination with one of my favorite desserts Tiramisu sounded so wonderful in my mind that I made me equal to work, to test ever." />
-
-                <TextView
-                    android:id="@+id/tv_author"
-                    style="@style/Text14ItGrey"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/space8"
-                    android:drawablePadding="@dimen/space8"
-                    android:text="by Marco Tomasini" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/space16"
-                    android:text="SHOPPING LIST"
-                    android:textAppearance="@style/SemiBold"
-                    android:textColor="@color/colorTextDark"
-                    android:textSize="@dimen/h2" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/space16"
-                    android:layout_marginBottom="@dimen/space8"
-                    android:text="OPEN SHOPPING LIST"
-                    android:textAppearance="@style/Regular"
-                    android:textColor="@color/colorPink"
-                    android:textSize="@dimen/h3" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/space16"
-                    android:text="PREPARATION"
-                    android:textAppearance="@style/SemiBold"
-                    android:textColor="@color/colorTextDark"
-                    android:textSize="@dimen/h2" />
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/space16"
                     android:text="COMMENTS"
-                    android:textAppearance="@style/SemiBold"
+                    android:textSize="@dimen/h2"
                     android:textColor="@color/colorTextDark"
-                    android:textSize="@dimen/h2" />
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recyclerShopping"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/space16"
-                    android:background="@null"
-                    android:nestedScrollingEnabled="false" />
-
+                    android:textAppearance="@style/SemiBold"/>
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recyclerComment"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/space16"
                     android:background="@null"
-                    android:nestedScrollingEnabled="false" />
+                    android:nestedScrollingEnabled="false"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space16"
+                    android:background="#f4f4f4"
+                    android:padding="@dimen/space16">
+                    <ImageView
+                        android:id="@+id/iv_user"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"/>
+                    <ImageButton
+                        android:id="@+id/bt_send"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        app:srcCompat="@drawable/ic_comment_red"
+                        android:layout_centerVertical="true"
+                        android:padding="@dimen/space8"
+                        android:background="@null"/>
+                    <EditText
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@id/bt_send"
+                        android:layout_toRightOf="@id/iv_user"
+                        android:layout_marginRight="@dimen/space16"
+                        android:layout_marginLeft="@dimen/space16"
+                        android:paddingTop="@dimen/space16"
+                        android:paddingBottom="@dimen/space16"
+                        android:layout_centerVertical="true"
+                        android:lines="2"
+                        android:hint="Type your comment here…"
+                        android:textSize="@dimen/h3"
+                        android:textColor="@color/colorTextDark"
+                        android:textColorHint="@color/colorTextGrey"
+                        android:textAppearance="@style/Regular"
+                        android:background="@null"/>
+                </RelativeLayout>
             </LinearLayout>
         </FrameLayout>
 
     </androidx.core.widget.NestedScrollView>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
