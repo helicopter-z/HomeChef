@@ -11,7 +11,7 @@ public class SplashActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash);
+        setContentView(R.layout.activity_splash)
         if(AccountActivity.getUserName(SplashActivity.this).length() == 0)
         {
             // call Login Activity - user not yet logged in
