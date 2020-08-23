@@ -170,6 +170,7 @@ public class LogInActivity extends AppCompatActivity implements View.OnClickList
 
             Intent intent = new Intent (LogInActivity.this, MainActivity.class);
             startActivity(intent);
+
         } catch (ApiException e) {
             // The ApiException status code indicates the detailed failure reason.
             // Please refer to the GoogleSignInStatusCodes class reference for more information.

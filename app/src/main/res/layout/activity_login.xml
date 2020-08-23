@@ -68,7 +68,6 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:gravity="center"
-        android:onClick="signupClick"
         android:text="No account yet? Create one"
         android:textColor="@color/colorTextDark"
         android:textSize="16dip" />
