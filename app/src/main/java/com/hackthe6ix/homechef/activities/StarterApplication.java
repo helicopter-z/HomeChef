@@ -41,4 +41,5 @@ public class StarterApplication extends Application {
     defaultACL.setPublicWriteAccess(true);
     ParseACL.setDefaultACL(defaultACL, true);
   }
+
 }

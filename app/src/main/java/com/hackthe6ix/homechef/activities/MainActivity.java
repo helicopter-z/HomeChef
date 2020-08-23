@@ -144,31 +144,4 @@ public class MainActivity extends AppCompatActivity {
             return 3;
         }
     }
-
-//    //Refreshes activity if user unfavourites a recipe
-//    @Override
-//    public void onRestart()
-//    {  // After a pause OR at startup
-//        super.onRestart();
-//        Intent intent = getIntent();
-//        finish();
-//        startActivity(intent);
-//
-//    }
-
-
-    @Override
-    public void onBackPressed() {
-
-        int count = getFragmentManager().getBackStackEntryCount();
-
-        if (count == 0) {
-            Log.i("DEAD","DEAD");
-            super.onBackPressed();
-            //additional code
-        } else {
-            getFragmentManager().popBackStack();
-        }
-
-    }
 }

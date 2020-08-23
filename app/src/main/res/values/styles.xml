@@ -20,6 +20,10 @@
         <item name="fontPath">fonts/SourceSansPro-Regular.otf</item>
     </style>
 
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_screen</item>
+    </style>
+
     <style name="SemiBold" parent="android:TextAppearance">
         <item name="fontPath">fonts/SourceSansPro-Semibold.otf</item>
     </style>
