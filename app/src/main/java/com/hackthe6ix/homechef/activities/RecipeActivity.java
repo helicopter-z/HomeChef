@@ -15,7 +15,6 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
-
 import com.hackthe6ix.homechef.R;
 import com.hackthe6ix.homechef.adapters.IngredientListAdapter;
 import com.hackthe6ix.homechef.models.RecipeContent.Image;
