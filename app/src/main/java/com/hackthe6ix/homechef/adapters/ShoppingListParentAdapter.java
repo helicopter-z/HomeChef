@@ -1,5 +1,6 @@
 package com.hackthe6ix.homechef.adapters;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.hackthe6ix.homechef.R;
+import com.hackthe6ix.homechef.fragments.ShoppingListFragment;
 import com.hackthe6ix.homechef.models.ShoppingList.ShoppingListResults;
 import com.squareup.picasso.Picasso;
 
@@ -20,8 +22,8 @@ import java.util.List;
 // Adapter for the Recipe Image/Label
 public class ShoppingListParentAdapter extends RecyclerView.Adapter<ShoppingListParentAdapter.ListViewHolder> {
     private List<ShoppingListResults> ParseList;
-    private AppCompatActivity activity;
-    public ShoppingListParentAdapter(List<ShoppingListResults> ParseList, AppCompatActivity activity){
+    private ShoppingListFragment activity;
+    public ShoppingListParentAdapter(List<ShoppingListResults> ParseList, ShoppingListFragment activity){
         this.ParseList = ParseList;
         this.activity = activity;
     }
@@ -44,7 +46,7 @@ public class ShoppingListParentAdapter extends RecyclerView.Adapter<ShoppingList
 
         }
 
-        LinearLayoutManager layoutManager = new LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this.activity.getActivity(), LinearLayoutManager.VERTICAL, false);
         holder.ingredientRecyclerView.setLayoutManager(layoutManager);
         ShoppingListChildAdapter adapter = new ShoppingListChildAdapter(ParseList.get(position).getIngredientList(),activity);
         holder.ingredientRecyclerView.setAdapter(adapter);

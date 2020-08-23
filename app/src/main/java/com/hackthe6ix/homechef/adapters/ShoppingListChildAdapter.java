@@ -10,15 +10,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.hackthe6ix.homechef.R;
+import com.hackthe6ix.homechef.fragments.ShoppingListFragment;
 
 import java.util.List;
 
 // Adapter for the Recipe individual ingredients
 public class ShoppingListChildAdapter extends RecyclerView.Adapter<ShoppingListChildAdapter.IngredientViewHolder> {
     private List<String> ingredients;
-    private AppCompatActivity activity;
+    private ShoppingListFragment activity;
 
-    public ShoppingListChildAdapter(List<String> ingredients, AppCompatActivity activity) {
+    public ShoppingListChildAdapter(List<String> ingredients, ShoppingListFragment activity) {
         this.ingredients = ingredients;
         this.activity = activity;
     }

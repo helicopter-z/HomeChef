@@ -49,8 +49,9 @@ public class RecipeActivity extends AppCompatActivity implements View.OnClickLis
     private String photo_url;
     private String recipeName;
 
-    TextView txtRecipeName, txtPrepTime, txtSaved, txtComments;
+    TextView txtRecipeName, txtPrepTime, txtRecipeYield;
     ImageView imgFood;
+    Button btnPreparation;
     SimpleRatingBar ratingBar;
     ToggleButton favouriteRecipe;
     LikeButton likeButton;
@@ -67,14 +68,16 @@ public class RecipeActivity extends AppCompatActivity implements View.OnClickLis
         setContentView(R.layout.activity_detail);
         String value = getIntent().getStringExtra("recipeId");
 
-        recipeLayout = (RelativeLayout) findViewById(R.id.rootview);
-        imgFood = (ImageView) findViewById(R.id.image);
-        txtRecipeName = (TextView) findViewById(R.id.tv_recipe_name);
-        txtPrepTime = (TextView) findViewById(R.id.tv_time);
-        txtSaved = (TextView) findViewById(R.id.tv_love);
-        txtComments = (TextView) findViewById(R.id.tv_comments);
-        ratingBar = findViewById(R.id.ratingBar);
+        recipeLayout = (RelativeLayout) findViewById(R.id.relativeLayout_recipe);
+        progressBar = (ProgressBar) findViewById(R.id.progressBar_load);
+        imgFood = (ImageView) findViewById(R.id.imageView_Recipe_image);
+        txtRecipeName = (TextView) findViewById(R.id.textView_name);
+        txtPrepTime = (TextView) findViewById(R.id.textView_prepTime);
+        txtRecipeYield = (TextView) findViewById(R.id.textView_yield);
+        ratingBar = findViewById(R.id.ratingBar_recipe);
 
+        btnPreparation = (Button) findViewById(R.id.button_prep_url);
+        btnPreparation.setOnClickListener(this);
 
         recipeLayout.setVisibility(View.INVISIBLE);
         progressBar.setVisibility(View.VISIBLE);
@@ -176,7 +179,7 @@ public class RecipeActivity extends AppCompatActivity implements View.OnClickLis
                 txtRecipeName.setText(response.body().getName());
                 recipeName = response.body().getName();
                 txtPrepTime.setText(getString(R.string.prepTime, response.body().getTotalTime()));
-                txtCommentNumber.setText(getString(R.string.yield, response.body().getNumberOfComments()));
+                txtRecipeYield.setText(getString(R.string.yield, response.body().getNumberOfServings()));
                 generateRecipeInfo(response.body().getIngredientLines());
                 prep_url = (response.body().getSource().getSourceRecipeUrl());
 
@@ -192,6 +195,17 @@ public class RecipeActivity extends AppCompatActivity implements View.OnClickLis
             }
         });
     }
+
+    /*Method to generate recipe info using RecyclerView with custom adapter*/
+    private void generateRecipeInfo(List<String> recipeIngredientList) {
+        Intent intent = getIntent();
+        recyclerView = (RecyclerView) findViewById(R.id.recycler_view_ingredients);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(RecipeActivity.this);
+        recyclerView.setLayoutManager(layoutManager);
+        adapter = new IngredientListAdapter(RecipeActivity.this, recipeIngredientList, intent);
+        recyclerView.setAdapter(adapter);
+    }
+
 
     public void onClick(View view) {
         Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(prep_url));

@@ -4,6 +4,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -24,7 +25,7 @@ import com.parse.ParseUser;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ShoppingListFragment extends AppCompatActivity {
+public class ShoppingListFragment extends Fragment {
     final List<ShoppingListResults> resultList = new ArrayList<>();
     ShoppingListParentAdapter adapter;
     RecyclerView shoppingListRecyclerView;
@@ -37,7 +38,6 @@ public class ShoppingListFragment extends AppCompatActivity {
     }
 
     @Nullable
-    @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_shopping_list, container, false);
 
@@ -46,7 +46,7 @@ public class ShoppingListFragment extends AppCompatActivity {
 
 
         shoppingListRecyclerView = (RecyclerView) rootView.findViewById(R.id.recycler_view_shoppingList);
-        LinearLayoutManager linearLayout = new LinearLayoutManager(this);
+        LinearLayoutManager linearLayout = new LinearLayoutManager(getActivity());
         shoppingListRecyclerView.setLayoutManager(linearLayout);
 
 

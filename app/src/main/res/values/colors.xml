@@ -7,6 +7,7 @@
     <color name="colorPinkDark">#A8213A</color>
     <color name="colorWhiteTrans">#E6FFFFFF</color>
     <color name="colorAccent">#FFFFFF</color>
+    <color name="recipe_title">#4c4c4c</color>
 
 
 </resources>

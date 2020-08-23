@@ -13,9 +13,8 @@ public class Image {
     @SerializedName("hostedLargeUrl")
     @Expose
     private String hostedLargeUrl;
-    @SerializedName("imageUrlsBySize")
-    @Expose
-    private ImageUrlsBySize imageUrlsBySize;
+
+    public ImageUrlsBySize imageUrlsBySize;
 
     public String getHostedSmallUrl() {
         return hostedSmallUrl;
@@ -45,7 +44,7 @@ public class Image {
         return imageUrlsBySize;
     }
 
-    public void setImageUrlsBySize(ImageUrlsBySize imageUrlsBySize) {
+    /*public void setImageUrlsBySize(ImageUrlsBySize imageUrlsBySize) {
         this.imageUrlsBySize = imageUrlsBySize;
-    }
+    }*/
 }

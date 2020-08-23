@@ -6,6 +6,17 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_settings">Settings</string>
     <string name="action_logout">Log Out</string>
-    <string name="Name">York Hu</string>
     <string name="button_addIng">ADD INGREDIENTS</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="recipeImage">recipeImage</string>
+    <string name="prepTime">"Prep Time: %s"</string>
+    <string name="yield">Yield: %d</string>
+    <string name="buttonText_prep">View Preparation</string>
+    <string name="tab_text_1">Search</string>
+    <string name="tab_text_2">Favourites</string>
+    <string name="tab_text_3">Tab 3</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="recipeMessage">&lt;b>Check Out This Recipe:&lt;/b> %1$s</string>
 </resources>

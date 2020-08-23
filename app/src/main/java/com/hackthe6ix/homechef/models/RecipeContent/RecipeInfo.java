@@ -22,9 +22,9 @@ public class RecipeInfo {
     @SerializedName("name")
     @Expose
     private String name;
-    @SerializedName("source")
-    @Expose
-    private Source source;
+
+    public Source source;
+
     @SerializedName("id")
     @Expose
     private String id;
@@ -114,13 +114,13 @@ public class RecipeInfo {
         this.ingredientLines = ingredientLines;
     }
 
-    public Attribution getAttribution() {
+    /* public Attribution getAttribution() {
         return attribution;
-    }
+    }*/
 
-    public void setAttribution(Attribution attribution) {
+    /*public void setAttribution(Attribution attribution) {
         this.attribution = attribution;
-    }
+    }*/
 
     public Integer getNumberOfServings() {
         return numberOfServings;
@@ -142,9 +142,9 @@ public class RecipeInfo {
         return attributes;
     }
 
-    public void setAttributes(Attributes attributes) {
+    /*public void setAttributes(Attributes attributes) {
         this.attributes = attributes;
-    }
+    }*/
 
     public Flavors getFlavors() {
         return flavors;
