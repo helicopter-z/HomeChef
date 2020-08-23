@@ -140,6 +140,7 @@ public class LogInActivity extends AppCompatActivity implements View.OnClickList
         GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
         if (account != null) {
             Intent intent = new Intent (LogInActivity.this, MainActivity.class);
+            startActivity(intent);
         }
     }
 
@@ -166,6 +167,7 @@ public class LogInActivity extends AppCompatActivity implements View.OnClickList
             GoogleSignInAccount account = completedTask.getResult(ApiException.class);
 
             // Signed in successfully, show authenticated UI.
+
             Intent intent = new Intent (LogInActivity.this, MainActivity.class);
             startActivity(intent);
         } catch (ApiException e) {
