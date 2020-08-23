@@ -2,7 +2,6 @@ package com.hackthe6ix.homechef.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ProgressBar;
@@ -18,7 +17,6 @@ import androidx.viewpager.widget.ViewPager;
 import com.google.android.material.navigation.NavigationView;
 import com.hackthe6ix.homechef.R;
 import com.hackthe6ix.homechef.fragments.FavoriteFragment;
-import com.hackthe6ix.homechef.fragments.IngredientSearchFragment;
 import com.hackthe6ix.homechef.fragments.ShoppingListFragment;
 
 public class MainActivity extends AppCompatActivity {
@@ -46,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
         mViewPager.setAdapter(mSectionsPagerAdapter);
         // Keeps lifecycle of Fragment - Prevents destroy from shopping list to search
         mViewPager.setOffscreenPageLimit(2);
+
 
         // Set up the tabs with icons and text
         final int[] ICONS = new int[]{
@@ -125,17 +124,13 @@ public class MainActivity extends AppCompatActivity {
             //return PlaceholderFragment.newInstance(position + 1);
             switch (position){
                 case 0:
-                    IngredientSearchFragment fragment1 = new IngredientSearchFragment();
+                    FavoriteFragment fragment1 = new FavoriteFragment();
                     return fragment1;
                 case 1:
-                    FavoriteFragment fragment2 = new FavoriteFragment();
+                    ShoppingListFragment fragment2 = new ShoppingListFragment();
                     return fragment2;
-                case 2:
-                    ShoppingListFragment fragment3 = new ShoppingListFragment();
-                    return fragment3;
-                default:
-                    return null;
             }
+            return null;
         }
 
         @Override
